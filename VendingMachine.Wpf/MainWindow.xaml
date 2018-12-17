@@ -1,0 +1,93 @@
+﻿<Window x:Class="VendingMachine.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VendingMachine.Wpf"
+        xmlns:viewModel="clr-namespace:VendingMachine.Wpf.ViewModel"
+        mc:Ignorable="d"
+        Title="VendingMachine" Height="550" Width="960" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Width="411">
+            <Grid>
+                <Label Content="Ваш баланс:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="76"/>
+                <Label Content="{Binding CustomerWallet.Balance, UpdateSourceTrigger=PropertyChanged, Mode=Default}" Margin="91,10,10,0" VerticalAlignment="Top" Height="26"/>
+                <ListView ItemsSource="{Binding CustomerWallet.Coins}" x:Name="CoinsList" Margin="0,41,0,0">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Достоинство монет" DisplayMemberBinding="{Binding CoinValue}"/>
+                            <GridViewColumn Header="Кол-во монет" DisplayMemberBinding="{Binding CoinsCount}"/>
+
+                            <GridViewColumn Header="Добавить монету">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Добавить монету" Style="{DynamicResource ButtonBlue}" Padding="6" Command="{Binding DataContext.DepositCoinCommand, 
+                                            ElementName=CoinsList}"
+                                         CommandParameter="{Binding}"
+                                         IsEnabled="{Binding CanGetCoin}" Height="33"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Width="538">
+            <Grid Margin="-1,-1,-1,1">
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Width="175">
+                    <Grid Margin="-1,-1,-1,1">
+                        <Label Content="Монетоприемник" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Label Content="Вы внесли:" Margin="10,52,89,0" VerticalAlignment="Top"/>
+                        <Label Content="{Binding VendingMachine.CoinAcceptor.Balance, UpdateSourceTrigger=PropertyChanged}" Margin="91,52,10,0" VerticalAlignment="Top" Height="26"/>
+                    </Grid>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Height="521" Margin="180,0,0,-2" VerticalAlignment="Top">
+                    <Grid Margin="9,0,0,0">
+                        <ListView ItemsSource="{Binding VendingMachine.Wallet.Coins}" Height="156" VerticalAlignment="Bottom" Margin="0,0,10,277">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Достоинство монет" DisplayMemberBinding="{Binding CoinValue}"/>
+                                    <GridViewColumn Header="Кол-во монет" DisplayMemberBinding="{Binding CoinsCount}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Label Content="Кошелек машины" HorizontalAlignment="Left" Margin="157,29,0,0" VerticalAlignment="Top" Width="120"/>
+                        <Button Content="Забрать сдачу" Style="{DynamicResource ButtonGreen}" IsEnabled="{Binding VendingMachine.Wallet.CanGetCachBack}" Command="{Binding GetCashBackFromMachineCommand}" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="132" Height="33"/>
+                        <Label Content="Сдача: " HorizontalAlignment="Left" Margin="0,55,0,0" VerticalAlignment="Top" Width="49"/>
+                        <Label Content="{Binding VendingMachine.Wallet.CashBack}" HorizontalAlignment="Left" Margin="54,55,0,0" VerticalAlignment="Top" Width="78" Height="26"/>
+                        <Label Content="Баланс:" HorizontalAlignment="Left" Margin="157,55,0,0" VerticalAlignment="Top" Width="57"/>
+                        <Label Content="{Binding VendingMachine.Wallet.Balance}" HorizontalAlignment="Left" Margin="219,55,0,0" VerticalAlignment="Top" Width="118" Height="26"/>
+                        <ListView x:Name="BeverageList" ItemsSource="{Binding VendingMachine.BeverageRepository.Items}" Height="262" VerticalAlignment="Bottom" Margin="0,0,10,10">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Напиток" DisplayMemberBinding="{Binding Path=Beverage.Name}"/>
+                                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Path=Beverage.Coast}"/>
+                                    <GridViewColumn Header="Остаток" DisplayMemberBinding="{Binding Path=AvailableBeverageCount}"/>
+
+                                    <GridViewColumn Header="Купить">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button Content="Купить" Padding="6" Style="{DynamicResource ButtonOrange}" Command="{Binding DataContext.BuyBeverageCommand, 
+                                                            ElementName=BeverageList}"
+                                                        CommandParameter="{Binding}"
+                                                        IsEnabled="{Binding CanBuyBeverage}" Height="33"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

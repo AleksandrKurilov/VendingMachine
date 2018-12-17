@@ -1,0 +1,6 @@
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.BL\bin\Debug\VendingMachine.BL.dll
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.BL\bin\Debug\VendingMachine.BL.pdb
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.BL\obj\Debug\VendingMachine.BL.csprojAssemblyReference.cache
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.BL\obj\Debug\VendingMachine.BL.csproj.CoreCompileInputs.cache
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.BL\obj\Debug\VendingMachine.BL.dll
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.BL\obj\Debug\VendingMachine.BL.pdb

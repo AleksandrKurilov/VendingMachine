@@ -1,0 +1,17 @@
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\VendingMachine.Tests.deps.json
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\VendingMachine.Tests.runtimeconfig.json
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\VendingMachine.Tests.runtimeconfig.dev.json
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\VendingMachine.Tests.dll
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\VendingMachine.Tests.pdb
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\VendingMachine.BL.dll
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\bin\Debug\netcoreapp2.1\VendingMachine.BL.pdb
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\obj\Debug\netcoreapp2.1\VendingMachine.Tests.csprojAssemblyReference.cache
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\obj\Debug\netcoreapp2.1\VendingMachine.Tests.csproj.CoreCompileInputs.cache
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\obj\Debug\netcoreapp2.1\VendingMachine.Tests.AssemblyInfoInputs.cache
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\obj\Debug\netcoreapp2.1\VendingMachine.Tests.AssemblyInfo.cs
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\obj\Debug\netcoreapp2.1\VendingMachine.Tests.csproj.CopyComplete
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\obj\Debug\netcoreapp2.1\VendingMachine.Tests.dll
+D:\Programms\VisualStudioProj\VendingMachineApp\VendingMachine.Tests\obj\Debug\netcoreapp2.1\VendingMachine.Tests.pdb
